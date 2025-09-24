@@ -6,6 +6,7 @@
 <title>Pentahexagon - 사람과 AI, 균형에서 혁신이 시작된다</title>
 <meta name="description" content="AI와 사람의 균형 속에서 지속 가능한 혁신을 설계하는 펜타헥사곤. 철학과 기술의 융합으로 미래를 만들어갑니다.">
 <meta name="keywords" content="AI, 인공지능, 인간, 균형, 혁신, 컨설팅, 펜타헥사곤, Pentahexagon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <style>
 
 * {
@@ -34,6 +35,14 @@ background-color: var(--dark-bg);
 color: var(--text-light);
 overflow-x: hidden;
 }
+/* nav */
+.navLogoImg{
+    width: 80px; 
+    height: 80px;
+    padding: 0;
+    position: relative;
+    left: 20px;
+}
 
 /* Slideshow Background */
 .slideshow-background {
@@ -44,6 +53,7 @@ width: 100vw;
 height: 100vh;
 z-index: -2;
 overflow: hidden;
+/* opacity: 0.6; */
 }
 
 .slideshow-background .slide {
@@ -68,7 +78,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(12, 10, 9, 0.85); /* Darker overlay */
+/* ; Darker overlay */
+/* background-color: rgba(6, 30, 82, 0.85); */
 backdrop-filter: blur(2px);
 z-index: -1;
 }
@@ -94,21 +105,6 @@ display: flex;
 justify-content: center;
 }
 
-.logo {
-display: inline-flex;
-align-items: center;
-gap: 0.75rem;
-color: var(--text-light);
-text-decoration: none;
-font-weight: 600;
-font-size: 1.25rem;
-letter-spacing: 1px;
-}
-
-.logo img {
-height: 130px;
-width: auto;
-}
 
 /* Hero Section */
 .hero {
@@ -148,7 +144,7 @@ font-weight: 400;
 .hero-slogan-en {
 font-size: 1.1rem;
 margin-bottom: 3rem;
-color: var(--text-medium);
+/* color: var(--text-medium); */
 font-style: italic;
 }
 
@@ -200,7 +196,7 @@ margin-bottom: 1.5rem;
 
 .section-description {
 font-size: 1.1rem;
-color: var(--text-medium);
+/* color: var(--text-medium); */
 max-width: 600px;
 margin: 0 auto 3rem auto;
 }
@@ -217,7 +213,7 @@ gap: 3rem;
 font-size: 1.25rem;
 font-weight: 600;
 margin-bottom: 0.5rem;
-color: var(--text-light);
+/* color: var(--text-light); */
 }
 
 .content-item h3 .icon {
@@ -225,9 +221,6 @@ margin-right: 0.5rem;
 color: var(--primary-purple);
 }
 
-.content-item p {
-color: var(--text-medium);
-}
 
 /* Vision Section specific */
 .vision-quote {
@@ -248,7 +241,7 @@ border-radius: 5px;
 font-weight: 500;
 transition: all 0.3s ease;
 border: 1px solid var(--primary-purple);
-color: var(--primary-purple);
+color: var(--primary-black);
 background: transparent;
 margin-top: 2rem;
 }
@@ -307,23 +300,88 @@ transform: translateY(0);
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+
 .brand-name {
-font-size: 2.8rem;
+font-size: 2.5rem;
 }
 
 .hero-slogan {
-    font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 
-.section-title {
-    font-size: 2rem;
+.hero-slogan-en {
+font-size: 0.8rem;
+
 }
+
+
+
+.section-title {
+    font-size: 1.5rem;
+}
+
+.section-description{
+  font-size: 0.8rem;
+}
+
+.content-item h3 {
+font-size: 1.3rem;
+
+}
+.content-item p {
+font-size: 0.8rem;
+}
+
+
+
 
 .vision-quote {
     font-size: 1.4rem;
 }
 
+}
 
+
+@media (max-width: 991.98px) {
+
+  #navContent{
+    text-align: right;
+    margin-right: 15px;
+  }
+
+
+  .navLogoImg{
+    display: block;
+    position: relative;
+    left: 46px;
+    width: 65px;
+
+
+}
+
+}
+.navUnderLine {
+    position: relative;
+}
+
+.navUnderLine::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    background-color: rgb(79, 202, 227);
+    position: absolute;
+    transition: width .4s;
+}
+
+.nav-item:hover .navUnderLine::after{
+   width: 100%;
+
+}
+
+#navA{
+    padding-bottom: 2px;
 }
 
 
@@ -332,29 +390,67 @@ font-size: 2.8rem;
 </style>
 </head>
 
-
 <body>
 
-     
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <img src="logo4.svg" alt="Pentahexagon Logo" class="navLogoImg">
+      <a class="navbar-brand fs-2" href="/">Pentahexagon</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" 
+      aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="navContent">
+
+          <li class="nav-item">
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#philosophy">철학</a>
+            </span>
+          </li>
+
+          <li class="nav-item">
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#services">사업영역</a>
+            </span>
+          </li>
+
+          <li class="nav-item">
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#vision">비전</a>
+            </span>
+          </li>
+
+          <li class="nav-item">
+            <span class="navUnderLine">
+                <a id="navA" class="nav-link text-white" href="#contact">협력문의</a>
+            </span>
+          </li>
+          <span style="width: 10px;"></span>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+
+
 
 <!-- Image Slideshow Background -->
 <div class="slideshow-background">
-<div class="slide active" style="background-image: url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
-<div class="slide" style="background-image: url('https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
-<div class="slide" style="background-image: url('https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
-<div class="slide" style="background-image: url('https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+<div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1691137493205-111951566e72?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+<div class="slide" style="background-image: url('https://images.unsplash.com/photo-1657724258402-45fd58a57db7?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+<div class="slide" style="background-image: url('https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+<div class="slide" style="background-image: url('https://images.unsplash.com/photo-1644777773065-d940c655e730?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
 </div>
 <div class="video-overlay"></div>
 
 <!-- Main Content -->
 <div class="content-wrapper">
 
-<!-- Header -->
-<header>
-    <a href="/" class="logo">
-         <img src="logo4.svg" alt="Pentahexagon Logo">
-    </a>
-</header>
+
 
 <main>
     <!-- Hero Section -->
@@ -446,10 +542,6 @@ font-size: 2.8rem;
 <!-- Footer -->
 <footer>
     <div class="footer-links">
-        <a href="#philosophy">철학</a>
-        <a href="#services">사업영역</a>
-        <a href="#vision">비전</a>
-        <a href="#contact">협력문의</a>
         <a href="#">블로그</a>
         <a href="#">채용정보</a>
     </div>
@@ -494,5 +586,7 @@ document.querySelectorAll('.fade-in-section').forEach(el => {
 observer.observe(el);
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
